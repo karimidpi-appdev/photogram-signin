@@ -60,7 +60,7 @@ class UsersController < ApplicationController
 
     save_status = user.save
 
-    if save_status == 
+    if save_status == true
       session.store(:user_id, user.id)
       redirect_to("/users/#{user.username}", { :notice => "Welcome, " + user.username + "!" } ) 
     else
